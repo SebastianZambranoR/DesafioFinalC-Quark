@@ -28,6 +28,7 @@ namespace RetoFinalCSharpQuark.Model
             stockAmount = StockAmount;
         }
 
+
         public double UnitPrice { get => unitPrice;}
         public uint StockAmount { get => stockAmount; set => stockAmount = value;}
         public DressQuality Quality { get => quality;}

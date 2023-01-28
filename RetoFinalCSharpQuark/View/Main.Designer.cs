@@ -32,29 +32,32 @@ namespace RetoFinalCSharpQuark.View
             this.panel1 = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
             this.SecondText = new System.Windows.Forms.Panel();
-            this.lblSellerNameAndCode = new System.Windows.Forms.Label();
             this.btnQuotes = new System.Windows.Forms.Button();
+            this.lblSellerName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtShirt = new System.Windows.Forms.RadioButton();
-            this.rbtJean = new System.Windows.Forms.RadioButton();
-            this.cbxShort = new System.Windows.Forms.CheckBox();
-            this.cbxMaoNeck = new System.Windows.Forms.CheckBox();
             this.cbxSlim = new System.Windows.Forms.CheckBox();
+            this.cbxMaoNeck = new System.Windows.Forms.CheckBox();
+            this.cbxShort = new System.Windows.Forms.CheckBox();
+            this.rbtJean = new System.Windows.Forms.RadioButton();
+            this.rbtShirt = new System.Windows.Forms.RadioButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.lblStock = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rbtStandar = new System.Windows.Forms.RadioButton();
             this.rbtPremium = new System.Windows.Forms.RadioButton();
+            this.rbtStandar = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbxPrice = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tbxAmount = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbxPrice = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnMakeQuote = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.lblQuoteValue = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnMakeQuote = new System.Windows.Forms.Button();
+            this.lblSellerId = new System.Windows.Forms.Label();
+            this.lblShopName = new System.Windows.Forms.Label();
+            this.lblShopAddress = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SecondText.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -67,6 +70,8 @@ namespace RetoFinalCSharpQuark.View
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkViolet;
+            this.panel1.Controls.Add(this.lblShopAddress);
+            this.panel1.Controls.Add(this.lblShopName);
             this.panel1.Controls.Add(this.Title);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -89,23 +94,14 @@ namespace RetoFinalCSharpQuark.View
             // SecondText
             // 
             this.SecondText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SecondText.Controls.Add(this.lblSellerId);
             this.SecondText.Controls.Add(this.btnQuotes);
-            this.SecondText.Controls.Add(this.lblSellerNameAndCode);
+            this.SecondText.Controls.Add(this.lblSellerName);
             this.SecondText.Dock = System.Windows.Forms.DockStyle.Top;
             this.SecondText.Location = new System.Drawing.Point(0, 90);
             this.SecondText.Name = "SecondText";
             this.SecondText.Size = new System.Drawing.Size(800, 35);
             this.SecondText.TabIndex = 1;
-            // 
-            // lblSellerNameAndCode
-            // 
-            this.lblSellerNameAndCode.AutoSize = true;
-            this.lblSellerNameAndCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSellerNameAndCode.Location = new System.Drawing.Point(12, 6);
-            this.lblSellerNameAndCode.Name = "lblSellerNameAndCode";
-            this.lblSellerNameAndCode.Size = new System.Drawing.Size(80, 16);
-            this.lblSellerNameAndCode.TabIndex = 0;
-            this.lblSellerNameAndCode.Text = "Seller name";
             // 
             // btnQuotes
             // 
@@ -116,6 +112,17 @@ namespace RetoFinalCSharpQuark.View
             this.btnQuotes.TabIndex = 1;
             this.btnQuotes.Text = "Historial de cotizaciones";
             this.btnQuotes.UseVisualStyleBackColor = true;
+            this.btnQuotes.Click += new System.EventHandler(this.btnQuotes_Click);
+            // 
+            // lblSellerName
+            // 
+            this.lblSellerName.AutoSize = true;
+            this.lblSellerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSellerName.Location = new System.Drawing.Point(12, 6);
+            this.lblSellerName.Name = "lblSellerName";
+            this.lblSellerName.Size = new System.Drawing.Size(80, 16);
+            this.lblSellerName.TabIndex = 0;
+            this.lblSellerName.Text = "Seller name";
             // 
             // groupBox1
             // 
@@ -133,17 +140,41 @@ namespace RetoFinalCSharpQuark.View
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Prenda";
             // 
-            // rbtShirt
+            // cbxSlim
             // 
-            this.rbtShirt.AutoSize = true;
-            this.rbtShirt.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbtShirt.Location = new System.Drawing.Point(25, 30);
-            this.rbtShirt.Name = "rbtShirt";
-            this.rbtShirt.Size = new System.Drawing.Size(102, 29);
-            this.rbtShirt.TabIndex = 0;
-            this.rbtShirt.TabStop = true;
-            this.rbtShirt.Text = "Camisa";
-            this.rbtShirt.UseVisualStyleBackColor = true;
+            this.cbxSlim.AutoSize = true;
+            this.cbxSlim.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxSlim.Location = new System.Drawing.Point(259, 117);
+            this.cbxSlim.Name = "cbxSlim";
+            this.cbxSlim.Size = new System.Drawing.Size(99, 29);
+            this.cbxSlim.TabIndex = 4;
+            this.cbxSlim.Text = "Chupín";
+            this.cbxSlim.UseVisualStyleBackColor = true;
+            this.cbxSlim.CheckedChanged += new System.EventHandler(this.cbxSlim_CheckedChanged);
+            // 
+            // cbxMaoNeck
+            // 
+            this.cbxMaoNeck.AutoSize = true;
+            this.cbxMaoNeck.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxMaoNeck.Location = new System.Drawing.Point(507, 30);
+            this.cbxMaoNeck.Name = "cbxMaoNeck";
+            this.cbxMaoNeck.Size = new System.Drawing.Size(139, 29);
+            this.cbxMaoNeck.TabIndex = 3;
+            this.cbxMaoNeck.Text = "Cuello mao";
+            this.cbxMaoNeck.UseVisualStyleBackColor = true;
+            this.cbxMaoNeck.CheckedChanged += new System.EventHandler(this.cbxMaoNeck_CheckedChanged);
+            // 
+            // cbxShort
+            // 
+            this.cbxShort.AutoSize = true;
+            this.cbxShort.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbxShort.Location = new System.Drawing.Point(259, 30);
+            this.cbxShort.Name = "cbxShort";
+            this.cbxShort.Size = new System.Drawing.Size(151, 29);
+            this.cbxShort.TabIndex = 2;
+            this.cbxShort.Text = "Manga corta";
+            this.cbxShort.UseVisualStyleBackColor = true;
+            this.cbxShort.CheckedChanged += new System.EventHandler(this.cbxShort_CheckedChanged);
             // 
             // rbtJean
             // 
@@ -156,39 +187,20 @@ namespace RetoFinalCSharpQuark.View
             this.rbtJean.TabStop = true;
             this.rbtJean.Text = "Pantalón";
             this.rbtJean.UseVisualStyleBackColor = true;
+            this.rbtJean.CheckedChanged += new System.EventHandler(this.rbtJean_CheckedChanged);
             // 
-            // cbxShort
+            // rbtShirt
             // 
-            this.cbxShort.AutoSize = true;
-            this.cbxShort.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxShort.Location = new System.Drawing.Point(259, 30);
-            this.cbxShort.Name = "cbxShort";
-            this.cbxShort.Size = new System.Drawing.Size(151, 29);
-            this.cbxShort.TabIndex = 2;
-            this.cbxShort.Text = "Manga corta";
-            this.cbxShort.UseVisualStyleBackColor = true;
-            // 
-            // cbxMaoNeck
-            // 
-            this.cbxMaoNeck.AutoSize = true;
-            this.cbxMaoNeck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxMaoNeck.Location = new System.Drawing.Point(507, 30);
-            this.cbxMaoNeck.Name = "cbxMaoNeck";
-            this.cbxMaoNeck.Size = new System.Drawing.Size(139, 29);
-            this.cbxMaoNeck.TabIndex = 3;
-            this.cbxMaoNeck.Text = "Cuello mao";
-            this.cbxMaoNeck.UseVisualStyleBackColor = true;
-            // 
-            // cbxSlim
-            // 
-            this.cbxSlim.AutoSize = true;
-            this.cbxSlim.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.cbxSlim.Location = new System.Drawing.Point(259, 117);
-            this.cbxSlim.Name = "cbxSlim";
-            this.cbxSlim.Size = new System.Drawing.Size(99, 29);
-            this.cbxSlim.TabIndex = 4;
-            this.cbxSlim.Text = "Chupín";
-            this.cbxSlim.UseVisualStyleBackColor = true;
+            this.rbtShirt.AutoSize = true;
+            this.rbtShirt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbtShirt.Location = new System.Drawing.Point(25, 30);
+            this.rbtShirt.Name = "rbtShirt";
+            this.rbtShirt.Size = new System.Drawing.Size(102, 29);
+            this.rbtShirt.TabIndex = 0;
+            this.rbtShirt.TabStop = true;
+            this.rbtShirt.Text = "Camisa";
+            this.rbtShirt.UseVisualStyleBackColor = true;
+            this.rbtShirt.CheckedChanged += new System.EventHandler(this.rbtShirt_CheckedChanged);
             // 
             // panel2
             // 
@@ -200,16 +212,6 @@ namespace RetoFinalCSharpQuark.View
             this.panel2.Size = new System.Drawing.Size(309, 46);
             this.panel2.TabIndex = 3;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(228, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Unidades de stock disponibles:\r\n";
-            // 
             // lblStock
             // 
             this.lblStock.AutoSize = true;
@@ -219,6 +221,16 @@ namespace RetoFinalCSharpQuark.View
             this.lblStock.Size = new System.Drawing.Size(45, 20);
             this.lblStock.TabIndex = 1;
             this.lblStock.Text = "____";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(3, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(228, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Unidades de stock disponibles:\r\n";
             // 
             // groupBox2
             // 
@@ -233,17 +245,6 @@ namespace RetoFinalCSharpQuark.View
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Calidad de prenda";
             // 
-            // rbtStandar
-            // 
-            this.rbtStandar.AutoSize = true;
-            this.rbtStandar.Location = new System.Drawing.Point(25, 45);
-            this.rbtStandar.Name = "rbtStandar";
-            this.rbtStandar.Size = new System.Drawing.Size(110, 29);
-            this.rbtStandar.TabIndex = 0;
-            this.rbtStandar.TabStop = true;
-            this.rbtStandar.Text = "Standard";
-            this.rbtStandar.UseVisualStyleBackColor = true;
-            // 
             // rbtPremium
             // 
             this.rbtPremium.AutoSize = true;
@@ -254,6 +255,19 @@ namespace RetoFinalCSharpQuark.View
             this.rbtPremium.TabStop = true;
             this.rbtPremium.Text = "Premium";
             this.rbtPremium.UseVisualStyleBackColor = true;
+            this.rbtPremium.CheckedChanged += new System.EventHandler(this.rbtPremium_CheckedChanged);
+            // 
+            // rbtStandar
+            // 
+            this.rbtStandar.AutoSize = true;
+            this.rbtStandar.Location = new System.Drawing.Point(25, 45);
+            this.rbtStandar.Name = "rbtStandar";
+            this.rbtStandar.Size = new System.Drawing.Size(110, 29);
+            this.rbtStandar.TabIndex = 0;
+            this.rbtStandar.TabStop = true;
+            this.rbtStandar.Text = "Standard";
+            this.rbtStandar.UseVisualStyleBackColor = true;
+            this.rbtStandar.CheckedChanged += new System.EventHandler(this.rbtStandar_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -269,22 +283,13 @@ namespace RetoFinalCSharpQuark.View
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Precio unitario y cantidad";
             // 
-            // label2
+            // tbxAmount
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "$";
-            // 
-            // tbxPrice
-            // 
-            this.tbxPrice.Location = new System.Drawing.Point(35, 39);
-            this.tbxPrice.Name = "tbxPrice";
-            this.tbxPrice.Size = new System.Drawing.Size(86, 30);
-            this.tbxPrice.TabIndex = 1;
-            this.tbxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPrice_KeyPress);
+            this.tbxAmount.Location = new System.Drawing.Point(224, 39);
+            this.tbxAmount.Name = "tbxAmount";
+            this.tbxAmount.Size = new System.Drawing.Size(76, 30);
+            this.tbxAmount.TabIndex = 3;
+            this.tbxAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxAmount_KeyPress);
             // 
             // label3
             // 
@@ -295,13 +300,22 @@ namespace RetoFinalCSharpQuark.View
             this.label3.TabIndex = 2;
             this.label3.Text = "Cantidad";
             // 
-            // tbxAmount
+            // tbxPrice
             // 
-            this.tbxAmount.Location = new System.Drawing.Point(224, 39);
-            this.tbxAmount.Name = "tbxAmount";
-            this.tbxAmount.Size = new System.Drawing.Size(76, 30);
-            this.tbxAmount.TabIndex = 3;
-            this.tbxAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxAmount_KeyPress);
+            this.tbxPrice.Location = new System.Drawing.Point(35, 39);
+            this.tbxPrice.Name = "tbxPrice";
+            this.tbxPrice.Size = new System.Drawing.Size(86, 30);
+            this.tbxPrice.TabIndex = 1;
+            this.tbxPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxPrice_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "$";
             // 
             // panel3
             // 
@@ -315,16 +329,14 @@ namespace RetoFinalCSharpQuark.View
             this.panel3.Size = new System.Drawing.Size(800, 128);
             this.panel3.TabIndex = 6;
             // 
-            // btnMakeQuote
+            // lblQuoteValue
             // 
-            this.btnMakeQuote.BackColor = System.Drawing.Color.DarkViolet;
-            this.btnMakeQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMakeQuote.Location = new System.Drawing.Point(50, 39);
-            this.btnMakeQuote.Name = "btnMakeQuote";
-            this.btnMakeQuote.Size = new System.Drawing.Size(174, 52);
-            this.btnMakeQuote.TabIndex = 0;
-            this.btnMakeQuote.Text = "Cotizar";
-            this.btnMakeQuote.UseVisualStyleBackColor = false;
+            this.lblQuoteValue.AutoSize = true;
+            this.lblQuoteValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuoteValue.Location = new System.Drawing.Point(476, 44);
+            this.lblQuoteValue.Name = "lblQuoteValue";
+            this.lblQuoteValue.Size = new System.Drawing.Size(0, 37);
+            this.lblQuoteValue.TabIndex = 2;
             // 
             // label4
             // 
@@ -336,14 +348,47 @@ namespace RetoFinalCSharpQuark.View
             this.label4.TabIndex = 1;
             this.label4.Text = "$";
             // 
-            // lblQuoteValue
+            // btnMakeQuote
             // 
-            this.lblQuoteValue.AutoSize = true;
-            this.lblQuoteValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuoteValue.Location = new System.Drawing.Point(476, 44);
-            this.lblQuoteValue.Name = "lblQuoteValue";
-            this.lblQuoteValue.Size = new System.Drawing.Size(0, 37);
-            this.lblQuoteValue.TabIndex = 2;
+            this.btnMakeQuote.BackColor = System.Drawing.Color.DarkViolet;
+            this.btnMakeQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMakeQuote.Location = new System.Drawing.Point(50, 39);
+            this.btnMakeQuote.Name = "btnMakeQuote";
+            this.btnMakeQuote.Size = new System.Drawing.Size(174, 52);
+            this.btnMakeQuote.TabIndex = 0;
+            this.btnMakeQuote.Text = "Cotizar";
+            this.btnMakeQuote.UseVisualStyleBackColor = false;
+            this.btnMakeQuote.Click += new System.EventHandler(this.btnMakeQuote_Click);
+            // 
+            // lblSellerId
+            // 
+            this.lblSellerId.AutoSize = true;
+            this.lblSellerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSellerId.Location = new System.Drawing.Point(160, 6);
+            this.lblSellerId.Name = "lblSellerId";
+            this.lblSellerId.Size = new System.Drawing.Size(57, 16);
+            this.lblSellerId.TabIndex = 2;
+            this.lblSellerId.Text = "Seller Id";
+            // 
+            // lblShopName
+            // 
+            this.lblShopName.AutoSize = true;
+            this.lblShopName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShopName.Location = new System.Drawing.Point(12, 53);
+            this.lblShopName.Name = "lblShopName";
+            this.lblShopName.Size = new System.Drawing.Size(118, 25);
+            this.lblShopName.TabIndex = 1;
+            this.lblShopName.Text = "ShopName";
+            // 
+            // lblShopAddress
+            // 
+            this.lblShopAddress.AutoSize = true;
+            this.lblShopAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShopAddress.Location = new System.Drawing.Point(617, 53);
+            this.lblShopAddress.Name = "lblShopAddress";
+            this.lblShopAddress.Size = new System.Drawing.Size(141, 25);
+            this.lblShopAddress.TabIndex = 2;
+            this.lblShopAddress.Text = "ShopAddress";
             // 
             // Main
             // 
@@ -384,7 +429,7 @@ namespace RetoFinalCSharpQuark.View
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.Panel SecondText;
         private System.Windows.Forms.Button btnQuotes;
-        private System.Windows.Forms.Label lblSellerNameAndCode;
+        private System.Windows.Forms.Label lblSellerName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox cbxSlim;
         private System.Windows.Forms.CheckBox cbxMaoNeck;
@@ -406,5 +451,8 @@ namespace RetoFinalCSharpQuark.View
         private System.Windows.Forms.Label lblQuoteValue;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnMakeQuote;
+        private System.Windows.Forms.Label lblSellerId;
+        private System.Windows.Forms.Label lblShopAddress;
+        private System.Windows.Forms.Label lblShopName;
     }
 }

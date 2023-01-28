@@ -8,3 +8,4 @@ C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\bi
 C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\bin\Debug\RetoFinalCSharpQuark.pdb
 C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.exe
 C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.pdb
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.View.QuotesHistory.resources

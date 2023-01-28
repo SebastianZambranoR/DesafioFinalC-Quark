@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RetoFinalCSharpQuark.Model
 {
-    class Seller
+    class Seller :ISellerModel
     {
         private string name;
         private string lastName;
@@ -53,6 +53,41 @@ namespace RetoFinalCSharpQuark.Model
         public string SellerId { get => sellerId; }
         public List<Quote> QuotesHistory { get => quotesHistory;}
         public Shop Shop { get => shop; set => shop = value; }
+
+        public List<Quote> GetSellerHistory()
+        {
+            return QuotesHistory;
+        }
+
+        public string GetSellerId()
+        {
+            return SellerId;
+        }
+
+        public string GetSellerName()
+        {
+            return Name +" " + LastName;
+        }
+
+        public string GetShopAddres()
+        {
+            return shop.ShopAddress;
+        }
+
+        public string GetShopName()
+        {
+            return shop.ShopName;
+        }
+
+        public uint GetStockAmount(bool IsShort, bool MaoNeck)
+        {
+            return shop.GetProductStock(IsShort, MaoNeck);
+        }
+
+        public uint GetStockAmount(bool IsSlim)
+        {
+            return shop.GetProductStock(IsSlim);
+        }
 
         public double MakeQuote(Dress Dress, uint Amount)
         {

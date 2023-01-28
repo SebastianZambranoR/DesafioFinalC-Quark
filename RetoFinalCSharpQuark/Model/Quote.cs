@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RetoFinalCSharpQuark.Model
 {
-    class Quote
+    public class Quote
     {
         string id;
         DateTime date;
