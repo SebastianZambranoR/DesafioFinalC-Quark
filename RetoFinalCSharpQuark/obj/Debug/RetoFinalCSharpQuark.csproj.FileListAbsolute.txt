@@ -1,0 +1,10 @@
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.csproj.AssemblyReference.cache
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.Properties.Resources.resources
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.View.Main.resources
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.csproj.GenerateResource.cache
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.csproj.CoreCompileInputs.cache
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\bin\Debug\RetoFinalCSharpQuark.exe.config
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\bin\Debug\RetoFinalCSharpQuark.exe
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\bin\Debug\RetoFinalCSharpQuark.pdb
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.exe
+C:\Users\sebas\Desktop\Reto C# Quark\DesafioFinalC-Quark\RetoFinalCSharpQuark\obj\Debug\RetoFinalCSharpQuark.pdb
