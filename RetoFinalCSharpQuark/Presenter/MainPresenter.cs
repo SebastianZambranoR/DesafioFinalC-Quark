@@ -48,6 +48,18 @@ namespace RetoFinalCSharpQuark.Presenter
                 return;
             }
 
+            if(String.IsNullOrWhiteSpace(view.unitPrice))
+            {
+                view.ShowError("Debes ingresar un valor para continuar");
+                return;
+            }
+
+            if (String.IsNullOrWhiteSpace(view.dressAmount))
+            {
+                view.ShowError("Debes ingresar una cantidad para continuar");
+                return;
+            }
+
             uint ingresedPrice = uint.Parse(view.unitPrice);
             uint quotedAmount = uint.Parse(view.dressAmount);
 
