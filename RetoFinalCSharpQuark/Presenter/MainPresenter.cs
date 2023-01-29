@@ -44,7 +44,7 @@ namespace RetoFinalCSharpQuark.Presenter
 
             if (!fieldsDefined)
             {
-                view.ShowError("Verifica los valores para poder realizar la corizacion");
+                view.ShowError("Verifica los valores para poder realizar la cotizacion");
                 return;
             }
 
