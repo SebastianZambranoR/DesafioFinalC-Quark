@@ -30,8 +30,11 @@ namespace RetoFinalCSharpQuark.View
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblShopAddress = new System.Windows.Forms.Label();
+            this.lblShopName = new System.Windows.Forms.Label();
             this.Title = new System.Windows.Forms.Label();
             this.SecondText = new System.Windows.Forms.Panel();
+            this.lblSellerId = new System.Windows.Forms.Label();
             this.btnQuotes = new System.Windows.Forms.Button();
             this.lblSellerName = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -55,9 +58,6 @@ namespace RetoFinalCSharpQuark.View
             this.lblQuoteValue = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnMakeQuote = new System.Windows.Forms.Button();
-            this.lblSellerId = new System.Windows.Forms.Label();
-            this.lblShopName = new System.Windows.Forms.Label();
-            this.lblShopAddress = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SecondText.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -78,6 +78,26 @@ namespace RetoFinalCSharpQuark.View
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 90);
             this.panel1.TabIndex = 0;
+            // 
+            // lblShopAddress
+            // 
+            this.lblShopAddress.AutoSize = true;
+            this.lblShopAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShopAddress.Location = new System.Drawing.Point(617, 53);
+            this.lblShopAddress.Name = "lblShopAddress";
+            this.lblShopAddress.Size = new System.Drawing.Size(141, 25);
+            this.lblShopAddress.TabIndex = 2;
+            this.lblShopAddress.Text = "ShopAddress";
+            // 
+            // lblShopName
+            // 
+            this.lblShopName.AutoSize = true;
+            this.lblShopName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShopName.Location = new System.Drawing.Point(12, 53);
+            this.lblShopName.Name = "lblShopName";
+            this.lblShopName.Size = new System.Drawing.Size(118, 25);
+            this.lblShopName.TabIndex = 1;
+            this.lblShopName.Text = "ShopName";
             // 
             // Title
             // 
@@ -102,6 +122,16 @@ namespace RetoFinalCSharpQuark.View
             this.SecondText.Name = "SecondText";
             this.SecondText.Size = new System.Drawing.Size(800, 35);
             this.SecondText.TabIndex = 1;
+            // 
+            // lblSellerId
+            // 
+            this.lblSellerId.AutoSize = true;
+            this.lblSellerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSellerId.Location = new System.Drawing.Point(160, 6);
+            this.lblSellerId.Name = "lblSellerId";
+            this.lblSellerId.Size = new System.Drawing.Size(57, 16);
+            this.lblSellerId.TabIndex = 2;
+            this.lblSellerId.Text = "Seller Id";
             // 
             // btnQuotes
             // 
@@ -360,36 +390,6 @@ namespace RetoFinalCSharpQuark.View
             this.btnMakeQuote.UseVisualStyleBackColor = false;
             this.btnMakeQuote.Click += new System.EventHandler(this.btnMakeQuote_Click);
             // 
-            // lblSellerId
-            // 
-            this.lblSellerId.AutoSize = true;
-            this.lblSellerId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSellerId.Location = new System.Drawing.Point(160, 6);
-            this.lblSellerId.Name = "lblSellerId";
-            this.lblSellerId.Size = new System.Drawing.Size(57, 16);
-            this.lblSellerId.TabIndex = 2;
-            this.lblSellerId.Text = "Seller Id";
-            // 
-            // lblShopName
-            // 
-            this.lblShopName.AutoSize = true;
-            this.lblShopName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShopName.Location = new System.Drawing.Point(12, 53);
-            this.lblShopName.Name = "lblShopName";
-            this.lblShopName.Size = new System.Drawing.Size(118, 25);
-            this.lblShopName.TabIndex = 1;
-            this.lblShopName.Text = "ShopName";
-            // 
-            // lblShopAddress
-            // 
-            this.lblShopAddress.AutoSize = true;
-            this.lblShopAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShopAddress.Location = new System.Drawing.Point(617, 53);
-            this.lblShopAddress.Name = "lblShopAddress";
-            this.lblShopAddress.Size = new System.Drawing.Size(141, 25);
-            this.lblShopAddress.TabIndex = 2;
-            this.lblShopAddress.Text = "ShopAddress";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -404,6 +404,7 @@ namespace RetoFinalCSharpQuark.View
             this.Controls.Add(this.panel1);
             this.Name = "Main";
             this.Text = "Main";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
